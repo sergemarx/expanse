@@ -20,16 +20,16 @@ endif()
 option(EXPANSE_COPY_AFTER_BUILD "Copy plugin to system folders after build" ON)
 
 juce_add_plugin(Expanse
-    COMPANY_NAME "YourName"            # <- change me
-    PLUGIN_MANUFACTURER_CODE Ynam      # 4 chars, at least one uppercase
-    PLUGIN_CODE Xpns                   # 4 chars, unique per plugin
+    COMPANY_NAME "YourName"
+    PLUGIN_MANUFACTURER_CODE Ynam
+    PLUGIN_CODE Xpns
     FORMATS ${EXPANSE_FORMATS}
     PRODUCT_NAME "Expanse"
     IS_SYNTH FALSE
     NEEDS_MIDI_INPUT FALSE
     NEEDS_MIDI_OUTPUT FALSE
     IS_MIDI_EFFECT FALSE
-    COPY_PLUGIN_AFTER_BUILD ${EXPANSE_COPY_AFTER_BUILD}
+    COPY_PLUGIN_AFTER_BUILD ${EXPANSE_COPY_AFTER_BUILD})
 
 target_sources(Expanse PRIVATE
     Source/PluginProcessor.cpp
